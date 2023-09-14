@@ -9,6 +9,9 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "events")
+@NamedQueries({
+    @NamedQuery(name = "findAll", query = "SELECT e FROM Event e")
+})
 public class Event {
 
   @Id

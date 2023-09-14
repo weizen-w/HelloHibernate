@@ -41,7 +41,7 @@ public class EntityManagerDemo {
   }
 
   static List<Event> findAll() {
-    return em.createQuery("SELECT e FROM Event e", Event.class).getResultList();
+    return em.createNamedQuery("findAll", Event.class).getResultList();
   }
 
   static Event findById(int id) {
